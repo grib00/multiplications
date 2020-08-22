@@ -1,3 +1,3 @@
 # multiplications
 
-https://grib00.github.io/multiplications/index.html
+https://grib00.github.io/multiplications
