@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>J'apprend mes tables en m'amusant...</title>
+    <meta http-equiv='Content-type' content='text/html; charset=iso-8859-1' />
+    <meta http-equiv='Content-Script-Type' content='text/javascript' />
+    <meta http-equiv='Content-Style-Type' content='text/css' />
+    <script src='tables.js' type='text/javascript'></script>
+    <style type='text/css'><![CDATA[
+#DivChoices { position: absolute; top:40px; left:0px; }
+#DivKeyboard { position: absolute; top:10px; left:450px; }
+#DivQuestions { position: absolute; top:10px; left:150px; }
+#TableKeyboard { border-style: outset; border-width: 2px; }
+#DivQuestions { font-weight: bold; }
+.large_but, .small_but { height: 3.5ex; }
+.large_but, .active_but { width: 6.35ex; }
+.small_but { width: 5ex; }
+]]>
+  </style>
+  </head>
+  <body background='tables.png'>
+    <div id='DivChoices'>
+    <form id='tables_form' action=''>
+      <table id='tables_tbl'>
+       <tr><td><input id="t2" type='checkbox' onclick='clickTableChoice()'>2x</td></tr>
+       <tr><td><input id="t3" type='checkbox' onclick='clickTableChoice()'>3x</td></tr>
+       <tr><td><input id="t4" type='checkbox' onclick='clickTableChoice()'>4x</td></tr>
+       <tr><td><input id="t5" type='checkbox' onclick='clickTableChoice()'>5x</td></tr>
+       <tr><td><input id="t6" type='checkbox' onclick='clickTableChoice()'>6x</td></tr>
+       <tr><td><input id="t7" type='checkbox' onclick='clickTableChoice()'>7x</td></tr>
+       <tr><td><input id="t8" type='checkbox' onclick='clickTableChoice()'>8x</td></tr>
+       <tr><td><input id="t9" type='checkbox' onclick='clickTableChoice()'>9x</td></tr>
+      </table>
+    </form>
+    </div>
+    <div id='DivKeyboard'>
+    <form id='calc_form' action=''>
+      <table border='0' id='TableKeyboard'>
+        <tr>
+          <th align='right'><span id='result_dsp'>&nbsp;</span></th>
+        </tr>
+        <tr>
+          <td>
+            <table border='0' width='100%'>
+              <tr>
+                <td><input type='button' class='large_but' value='7' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='8' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='9' onclick='clickDigit(value)'/></td>
+              </tr>
+              <tr>
+                <td><input type='button' class='large_but' value='4' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='5' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='6' onclick='clickDigit(value)'/></td>
+              </tr>
+              <tr>
+                <td><input type='button' class='large_but' value='1' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='2' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='3' onclick='clickDigit(value)'/></td>
+              </tr>
+              <tr>
+                <td><input type='button' class='large_but' value='0' onclick='clickDigit(value)'/></td>
+                <td><input type='button' class='large_but' value='&#x2190;' onclick='clickBackspace()'/></td>
+                <td><input type='button' id='f_but' class='large_but' value='OK' onclick='clickOK()'/></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+    </div>
+    <div id='DivQuestions'></div>
+    <script type='text/javascript'>init();</script>
+  </body>
+</html>
